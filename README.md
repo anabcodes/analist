@@ -8,13 +8,13 @@ AnaList é uma aplicação de to-do list desenvolvida em **Ruby on Rails** para 
 - **CRUD de Listas:** 
   - Gerencie suas listas de tarefas, adicionando e organizando múltiplas listas.
 - **CRUD de Itens:** 
-  - Adicione, edite, marque como concluído e exclua itens específicos de suas listas.
+  - Adicione, edite e exclua itens específicos de suas listas.
 
 ## Tecnologias Utilizadas
 - **Ruby on Rails:** Framework principal utilizado no desenvolvimento.
 - **PostgreSQL:** Banco de dados utilizado para armazenar informações de usuários, listas e itens.
 
-## Modelagem de seu banco de dados
+## Modelagem do banco de dados do site
 ![imagem da modelagem](app/assets/images/model_final.png)
 
 ## Imagens do site
