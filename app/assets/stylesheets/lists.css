@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+VN:wght@100..400&family=Solway:wght@300;400;500;700;800&display=swap');
+.button-new-list{
+    position:fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--green);
+    font-size: 40px;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--medium-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    background-color: var(--medium-gray);
+    outline: none;
+    border: none;
+}
+
+button{
+    background-color: var(--medium-gray);
+    border: none;
+    position: relative;
+}
+
+.button-new-item{
+    background-color: var(--blue);
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    right: 0.2em;
+    bottom: 0.2em;
+}
+
+.list-card{
+    /* padding-top: 1rem; */
+    background: linear-gradient(to left, var(--green), var(--blue));
+    margin-top: 2em;
+    border-radius: 20px;
+    position: relative;
+    width: 250px;
+    height: fit-content;
+}
+
+.remove-button{
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    background-color: transparent;
+    position: relative;
+    right: 0;
+    margin: 0.5em;
+}
+
+.list-name-input{
+    font-size: 17px;
+    background-color:transparent;
+    color: var(--dark-grey);
+    padding: 0.8em;
+}
+
+#lists{
+    display: flex;
+    gap: 2em;
+}
+
+.white-container{
+    background-color: var(--white);
+    height: 85%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.item-content-container{
+    display: flex;
+    gap: 1rem;
+    background-color: transparent;
+}
+
+.list-content-input{
+    background-color: transparent;
+    color: var(--dark-grey);
+}
+
+.remove-item-button{
+    background-color: transparent;
+    color: rgb(150, 146, 146);
+    margin: 0;
+    display: inline-block;
+}
+
+.done{
+    list-style: none;
+}
+
+.items{
+    display: flex;
+    padding: 1em;
+}
+
+#about{
+    background-color: transparent;
+    gap: 1rem;
+}
+
+.link-header-home{
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.link-my-account{
+    padding: 0.7em;
+    border-radius: 30px;
+}
+
+button{
+    font-size: 18px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.list-name-input{
+    font-weight: bold;
+}

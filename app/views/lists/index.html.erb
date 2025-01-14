@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag('lists')%>
+
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Lists" %>
+<div class="container">
+<h1>Minhas listas</h1>
+<div id="lists">
+  <% @lists.each do |list| %>
+    <div class="list-card" id="list_<%= list.id %>">
+      <%= button_to 'X', list_path(list), method: :delete, remote: true, class: 'remove-button', data: { confirm: 'Are you sure?' } %>
+      
+
+    <div class="white-container">
+      <%= form_with(model: list, local: false, remote: true) do |form| %>
+        <div class="list-name-container">
+          <%= form.text_field :name, value: list.name, class: 'list-name-input', id: "edit-list-name-#{list.id}" %>
+        </div>
+      <% end %>
+      <ul>
+        <% list.items.each do |item| %>
+          <div class="items">
+          
+          <%= form_with(model: item, url: list_item_path(list, item), local: false, remote: true) do |form| %>
+            <div class="item-content-container">
+              <%= form.text_field :content, value: item.content, class: 'list-content-input', id: "edit-item-content-#{item.id}" %>
+            </div>
+          <% end %>
+          <%= button_to 'x', list_item_path(list, item), method: :delete, remote: true, class: 'remove-item-button' %>
+          </div>
+        <% end %>
+      </ul>
+      <%= button_to '+', list_items_path(list), method: :post, remote:true, class: 'button-new-item' %>
+    </div>
+
+
+
+
+    </div>
+  <% end %>
+</div>
+</div>
+<%= button_to '+', lists_path, method: :post, remote: true, class: 'button-new-list' %>

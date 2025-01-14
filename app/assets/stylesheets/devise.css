@@ -1,0 +1,34 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5em;
+    flex-direction: column;
+    background-color: var(--medium-gray);
+    margin: 0 auto;
+    border-radius: 20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+.field{
+    width: 350px;
+}
+
+.field label{
+    font-size: 18px;
+}
+
+.field input{
+    margin-top: 0.5em;
+    width: 100%;
+    height: 30px;
+    background-color: var(--dark-grey);
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    outline: none;
+    padding-left: 10px;
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Analist" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header>
+      <%= link_to "AnaList", root_path, class: 'link-header', id: 'link-header-logo' %>
+      <ul>
+          <%= link_to "minhas listas", lists_path, class: 'link-header-ul' %>
+        <% if user_signed_in? %>
+          <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: 'link-header-ul' %>
+        <% else %>
+          <%= button_to 'entrar', new_user_session_path, class: 'link-header-ul' %>
+          <%= button_to 'criar conta', new_user_registration_path, method: :get ,class: 'link-header-ul' %>
+        <% end %>
+      </ul>
+          <%= button_to 'minha conta', edit_user_registration_path, method: :get ,class: 'link-my-account' %>
+      
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="content">
+    <%= yield %>
+    </div>
+    <footer>
+      <span>Desenvolvido com 🤍 por Ana Braghim</span>
+    </footer>
+  </body>
+</html>

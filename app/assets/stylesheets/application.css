@@ -1,0 +1,89 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Solway:wght@300;400;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white);
+    font-family: "Noto Serif Georgian", serif;
+}
+
+:root{
+    --green: #1fe218;
+    --blue: #1d52ab;
+    --black: #191919;
+    --white: #e7e8dc;
+    --dark-grey: #252121;
+    --light-grey: #CFD0C5;
+    --medium-gray: #252121;
+}
+
+body{
+    background-color: var(--black);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+header{
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 10rem;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    font-size: 18px;
+}
+
+header ul li {
+    list-style: none;
+    font-size: 18px;
+}
+
+.link-header{
+    color: var(--black);
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+#link-header-logo{
+    font-size: 25px;
+    font-family: "Noto Serif Georgian", serif;
+}
+
+#link-my-account{
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+}
+
+footer{
+    background-color: var(--medium-gray);
+    padding: 2em;
+    color: var(--light-grey);
+    text-align: center;
+    width: 100%;
+}
+
+.content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-header-ul{
+    background-color: var(--light-grey);
+    color: var(--black);
+    text-decoration: none;
+    padding: 0.7em;
+    border-radius: 30px;
+}
+

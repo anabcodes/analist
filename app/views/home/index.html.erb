@@ -1,0 +1,14 @@
+<div class="container " id="about">
+<% if user_signed_in? %>
+    <h1>Bem vindo de volta!</h1>
+    <p>Venha ver suas listas..</p>
+    <%= link_to "minhas listas", lists_path, class: 'link-header' %>
+    <%= button_to 'Deslogar', destroy_user_session_path, method: :delete %>
+<% else %>
+<h1>Conheça o AnaList</h1>
+<p>Se já tem uma conta entre nela!</p>
+<%= button_to 'entrar', new_user_session_path, class: 'link-header-home' %>
+<p>Se não, você pode criar uma conta agora mesmo</p>
+<%= button_to 'criar conta', new_user_registration_path, method: :get ,class: 'link-header-home' %>
+<% end %>
+</div>
