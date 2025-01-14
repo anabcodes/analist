@@ -1,0 +1,35 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: postgres
+  port: 5432
+  password: 12345678
+  host: localhost
+
+
+development:
+  <<: *default
+  database: analist_development
+test:
+  <<: *default
+  database: analist_test
+
+production:
+  primary: &primary_production
+    <<: *default
+    database: analist_production
+    username: analist
+    password: <%= ENV["ANALIST_DATABASE_PASSWORD"] %>
+  cache:
+    <<: *primary_production
+    database: analist_production_cache
+    migrations_paths: db/cache_migrate
+  queue:
+    <<: *primary_production
+    database: analist_production_queue
+    migrations_paths: db/queue_migrate
+  cable:
+    <<: *primary_production
+    database: analist_production_cable
+    migrations_paths: db/cable_migrate
